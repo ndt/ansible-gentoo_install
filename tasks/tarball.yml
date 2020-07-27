@@ -16,7 +16,7 @@
     tmp_dest: /mnt/gentoo
 
 - name: extract stage tarball
-  command: "tar xvjpf {{ latest_stage_tarball }} --xattrs"
+  command: "tar xvJpf {{ latest_stage_tarball }} --xattrs"
   args:
     warn: no
     chdir: /mnt/gentoo
