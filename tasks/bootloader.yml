@@ -5,7 +5,7 @@
     state: installed
 
 - name: install grub to MBR
-  command: grub-install {{ gentoo_install_disk }}
+  command: grub-install --efi-directory=/boot/efi {{ gentoo_install_disk }}
   args:
     creates: /boot/grub
 

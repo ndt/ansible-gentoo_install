@@ -30,7 +30,7 @@
 - name: configure root mount
   mount:
     name: /
-    src: "{{ gentoo_install_disk }}2"
+    src: "{{ gentoo_install_disk }}4"
     fstype: ext4
     state: present
     opts: noatime
@@ -39,7 +39,7 @@
 - name: configure boot mountpoint
   mount:
     name: /boot
-    src: "{{ gentoo_install_disk }}1"
+    src: "{{ gentoo_install_disk }}2"
     fstype: ext2
     state: present
     opts: noatime,ro
