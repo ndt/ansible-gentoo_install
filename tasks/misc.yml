@@ -9,11 +9,7 @@
     mode: '0644'
 
 - name: timezone symlink
-  file:
-    dest: /etc/localtime
-    src: /usr/share/zoneinfo/{{ gentoo_install_timezone }}
-    state: link
-    force: yes
+  command: "emerge --config sys-libs/timezone-data"
 
 - name: configure locales
   lineinfile:
