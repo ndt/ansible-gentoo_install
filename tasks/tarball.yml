@@ -12,6 +12,7 @@
 - name: fetch latest stage tarball
   get_url:
     url: "{{ gentoo_install_baseurl }}{{ latest_stage_tarball_url_suffix }}"
+    checksum: "sha512:{{ gentoo_install_baseurl }}{{ latest_stage_tarball_url_suffix }}.DIGESTS"
     dest: /mnt/gentoo/{{ latest_stage_tarball }}
     tmp_dest: /mnt/gentoo
 
